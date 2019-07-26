@@ -1,2 +1,4 @@
 import '../sass/main.scss';
-import './line-sample';
+import lineSample from './line-sample';
+
+lineSample();
