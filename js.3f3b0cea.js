@@ -120,4 +120,4 @@ var e=require("./_FullInternals").Konva;e._injectGlobal(e),exports.default=e,mod
 },{"konva":"UjKJ"}],"QvaY":[function(require,module,exports) {
 "use strict";require("../sass/main.scss"),require("./line-sample");
 },{"../sass/main.scss":"clu1","./line-sample":"sKyT"}]},{},["QvaY"], null)
-//# sourceMappingURL=/js.3f3b0cea.js.map
+//# sourceMappingURL=konvas-playground/js.3f3b0cea.js.map
