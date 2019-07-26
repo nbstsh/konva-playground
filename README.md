@@ -1,4 +1,4 @@
 # konvas-playground
-This demo app is a playground for [konvas](https://konvajs.org/)
+This demo app is a playground for [konva](https://konvajs.org/)
 
-https://nbstsh.github.io/konvas-playground/
+https://nbstsh.github.io/konva-playground/
