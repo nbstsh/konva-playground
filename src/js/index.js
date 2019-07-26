@@ -1,35 +1,59 @@
 import '../sass/main.scss';
 import Konva from 'konva';
 
-var stage = new Konva.Stage({
+const stage = new Konva.Stage({
 	container: 'container',
 	width: window.innerWidth,
 	height: window.innerHeight
 });
 
-// add canvas element
-var layer = new Konva.Layer();
+const layer = new Konva.Layer();
+
+// add line
+const line = new Konva.Line({
+	x: 100,
+	y: 50,
+	points: [73, 70, 340, 23, 450, 60, 500, 20],
+	stroke: 'red',
+	tension: 1
+});
+
+layer.add(line);
+
 stage.add(layer);
 
-// create shape
-var box = new Konva.Rect({
-	x: 50,
-	y: 50,
-	width: 100,
-	height: 50,
-	fill: '#00D2FF',
-	stroke: 'black',
-	strokeWidth: 4,
-	draggable: true
-});
-layer.add(box);
+/* Konvas Event ========================
+- mouseover, mousemove, mouseout, mouseenter, mouseleave, mousedown, mouseup, 
+- wheel, contextmenu, click, dblclick, 
+- touchstart, touchmove, touchend, 
+- tap, dbltap, 
+- dragstart, dragmove, and dragend 
+=======================================*/
 
-layer.draw();
+const logCurrentPosition = () => {
+	const mousePos = stage.getPointerPosition();
+	console.log(mousePos);
+};
 
-// add cursor styling
-box.on('mouseover', function() {
-	document.body.style.cursor = 'pointer';
+let isMouseDown = false;
+
+stage.on('mousedown touchstart', () => {
+	console.log('mousedown touchstart');
+	logCurrentPosition();
+	isMouseDown = true;
 });
-box.on('mouseout', function() {
-	document.body.style.cursor = 'default';
+
+stage.on('mouseup touchend', () => {
+	console.log('mouseup');
+	logCurrentPosition();
+	isMouseDown = false;
 });
+
+stage.on('mousemove touchmove', () => {
+	if (isMouseDown) {
+		console.log('mousemove touchmove during MouseDown');
+		logCurrentPosition();
+	}
+});
+
+console.log(layer.toJSON());
