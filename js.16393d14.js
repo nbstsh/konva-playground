@@ -120,4 +120,4 @@ var e=require("./_FullInternals").Konva;e._injectGlobal(e),exports.default=e,mod
 },{"konva":"UjKJ"}],"QvaY":[function(require,module,exports) {
 "use strict";require("../sass/main.scss");var e=s(require("./line-sample"));function s(e){return e&&e.__esModule?e:{default:e}}(0,e.default)();
 },{"../sass/main.scss":"clu1","./line-sample":"sKyT"}]},{},["QvaY"], null)
-//# sourceMappingURL=/konvas-playground/js.16393d14.js.map
+//# sourceMappingURL=/konva-playground/js.16393d14.js.map
